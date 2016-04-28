@@ -17,7 +17,10 @@
       </plugin>
     </plugins>
   </build>
-  <packaging>jar</packaging>
+  <modules>
+    <module>mongo-basic</module>
+  </modules>
+  <packaging>pom</packaging>
 
   <name>mongo-parent</name>
   <url>http://maven.apache.org</url>
