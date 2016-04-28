@@ -19,6 +19,7 @@
   </build>
   <modules>
     <module>mongo-basic</module>
+    <module>mongo-crud</module>
   </modules>
   <packaging>pom</packaging>
 
