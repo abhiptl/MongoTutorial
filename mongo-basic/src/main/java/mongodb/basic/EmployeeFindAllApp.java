@@ -1,15 +1,11 @@
-package com.abhishek.mongodb.basic;
+package mongodb.basic;
 
 import com.abhishek.mongodb.common.MongoConstant;
 import com.abhishek.mongodb.common.MongoUtil;
-import com.mongodb.Block;
 import com.mongodb.MongoClient;
-import com.mongodb.ReadPreference;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.model.Filters;
-import com.mongodb.client.model.Sorts;
 import org.bson.Document;
 
 /**

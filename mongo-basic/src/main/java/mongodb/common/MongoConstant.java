@@ -1,4 +1,4 @@
-package com.abhishek.mongodb.common;
+package mongodb.common;
 
 /**
  * Created by info on 4/17/2016.

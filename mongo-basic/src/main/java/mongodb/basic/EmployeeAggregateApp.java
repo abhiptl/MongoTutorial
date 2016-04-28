@@ -1,19 +1,15 @@
-package com.abhishek.mongodb.basic;
+package mongodb.basic;
 
 import com.abhishek.mongodb.common.MongoConstant;
 import com.abhishek.mongodb.common.MongoUtil;
-import com.mongodb.Block;
 import com.mongodb.MongoClient;
 import com.mongodb.client.AggregateIterable;
-import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 
 import java.util.Arrays;
-
-import static java.util.Arrays.asList;
 
 /**
  * Created by info on 4/22/2016.
