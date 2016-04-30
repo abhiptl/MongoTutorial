@@ -1,4 +1,4 @@
-package mongodb;
+package com.abhishek.mongodb;
 
 
 public class MongoApp

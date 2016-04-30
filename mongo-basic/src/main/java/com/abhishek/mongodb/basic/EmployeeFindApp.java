@@ -1,4 +1,4 @@
-package mongodb.basic;
+package com.abhishek.mongodb.basic;
 
 
 import com.abhishek.mongodb.common.MongoConstant;

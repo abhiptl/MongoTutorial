@@ -1,4 +1,4 @@
-package mongodb.common;
+package com.abhishek.mongodb.common;
 
 import com.mongodb.Block;
 import com.mongodb.client.AggregateIterable;
