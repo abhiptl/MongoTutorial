@@ -20,6 +20,7 @@
   <modules>
     <module>mongo-basic</module>
     <module>mongo-crud</module>
+    <module>mongo-operators</module>
   </modules>
   <packaging>pom</packaging>
 
