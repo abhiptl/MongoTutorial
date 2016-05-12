@@ -11,5 +11,12 @@
 
     <artifactId>mongo-operators</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.abhishek.mongodb</groupId>
+            <artifactId>mongo-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>
