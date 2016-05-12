@@ -86,10 +86,4 @@ Thumbs.db
 *.iml
 atlassian-ide-plugin.xml
 /bin
-/src/main/resources/crossing.properties
 
-FieldMapHorizontal_*.xls
-FieldMapHorizontalRowColumn_*.xls
-FieldMapVertical_*.xls
-FieldMapVerticalRowColumn_*.xls
-temp
