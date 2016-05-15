@@ -1,7 +1,7 @@
 package com.abhishek.mongodb.basic;
 
-import com.abhishek.mongodb.common.MongoConstant;
-import com.abhishek.mongodb.common.MongoUtil;
+import com.abhishek.mongodb.constant.MongoConstant;
+import com.abhishek.mongodb.constant.MongoUtil;
 import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
@@ -9,7 +9,7 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
 /**
- * Created by info on 4/22/2016.
+ * Created by Abhishek on 4/22/2016.
  */
 public class EmployeeFindAllApp {
     public static void main(String arg[]){
@@ -22,7 +22,7 @@ public class EmployeeFindAllApp {
 
         System.out.println("Finding all employees");
         FindIterable<Document> allEmployee = employeeCollection.find();
-        MongoUtil.printEmployeeDocuments(allEmployee);
+        MongoUtil.printFindIterableDocuments(allEmployee);
         mongo.close();
     }
 

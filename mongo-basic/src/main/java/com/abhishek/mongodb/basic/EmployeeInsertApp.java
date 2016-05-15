@@ -1,6 +1,6 @@
 package com.abhishek.mongodb.basic;
 
-import com.abhishek.mongodb.common.MongoConstant;
+import com.abhishek.mongodb.constant.MongoConstant;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;

@@ -1,8 +1,8 @@
 package com.abhishek.mongodb.basic;
 
 
-import com.abhishek.mongodb.common.MongoConstant;
-import com.abhishek.mongodb.common.MongoUtil;
+import com.abhishek.mongodb.constant.MongoConstant;
+import com.abhishek.mongodb.constant.MongoUtil;
 import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
@@ -23,33 +23,33 @@ public class EmployeeFindApp {
 
         System.out.println("Finding all employees");
         FindIterable<Document> allEmployee = employeeCollection.find();
-        MongoUtil.printEmployeeDocuments(allEmployee);
+        MongoUtil.printFindIterableDocuments(allEmployee);
 
         System.out.println("Finding all patel developers");
         Document queryDocument = new Document("lastName", "Patel");
         FindIterable<Document> allPatelDevelopers = employeeCollection.find(queryDocument);
-        MongoUtil.printEmployeeDocuments(allPatelDevelopers);
+        MongoUtil.printFindIterableDocuments(allPatelDevelopers);
 
         System.out.println("Finding all employees having designation=Java developer using Filters");
         FindIterable<Document> javaDevelopers = employeeCollection.find(Filters.eq("designation", "Java Developer"));
-        MongoUtil.printEmployeeDocuments(javaDevelopers);
+        MongoUtil.printFindIterableDocuments(javaDevelopers);
 
         System.out.println("Find all employees who knows Spring language. This is seach in Arary field of Document");
         //FindIterable<Document> empsKnowingJava = employeeCollection.find(Filters.elemMatch("knownLanguages", Filters.eq("knownLanguages", "Java")));
         FindIterable<Document> empsKnowingSpring = employeeCollection.find(Filters.eq("knownLanguages", "Spring"));
-        MongoUtil.printEmployeeDocuments(empsKnowingSpring);
+        MongoUtil.printFindIterableDocuments(empsKnowingSpring);
 
 
         System.out.println("Find employees who are Java Developer and know JavaScript");
         Document javaDeveloperDocument = new Document("designation", "Java Developer");
         Document javaScriptKnowLanguage = new Document("knownLanguages", "Java Script");
         FindIterable<Document> javaDeveloperWithJavaScripKnowEmps = employeeCollection.find(Filters.and(javaDeveloperDocument, javaScriptKnowLanguage));
-        MongoUtil.printEmployeeDocuments(javaDeveloperWithJavaScripKnowEmps);
+        MongoUtil.printFindIterableDocuments(javaDeveloperWithJavaScripKnowEmps);
 
 
         System.out.println("Find all employees order by Data of Joining descending");
         FindIterable<Document> employeesOrderByDateOfJoining = employeeCollection.find().sort(Sorts.descending("doj"));
-        MongoUtil.printEmployeeDocuments(employeesOrderByDateOfJoining);
+        MongoUtil.printFindIterableDocuments(employeesOrderByDateOfJoining);
 
         mongo.close();
     }

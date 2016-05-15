@@ -1,7 +1,7 @@
 package com.abhishek.mongodb.basic;
 
-import com.abhishek.mongodb.common.MongoConstant;
-import com.abhishek.mongodb.common.MongoUtil;
+import com.abhishek.mongodb.constant.MongoConstant;
+import com.abhishek.mongodb.constant.MongoUtil;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
@@ -10,7 +10,7 @@ import org.bson.Document;
 import org.bson.types.ObjectId;
 
 /**
- * Created by info on 4/17/2016.
+ * Created by Abhishek on 4/17/2016.
  */
 public class EmployeeDeleteApp {
 
@@ -21,13 +21,13 @@ public class EmployeeDeleteApp {
 
         MongoCollection<Document> employeeCollection = mongoDatabase.getCollection("employee");
 
-        MongoUtil.printEmployeeDocuments(employeeCollection.find());
+        MongoUtil.printFindIterableDocuments(employeeCollection.find());
 
         System.out.println("Deleting document by First Name");
         DeleteResult deleteResult = employeeCollection.deleteOne(new Document("_id", new ObjectId("571a3e0422a4791c747f72cd")));
         System.out.println("Total Delete documents:"+deleteResult.getDeletedCount());
 
-        MongoUtil.printEmployeeDocuments(employeeCollection.find());
+        MongoUtil.printFindIterableDocuments(employeeCollection.find());
 
         mongo.close();
 

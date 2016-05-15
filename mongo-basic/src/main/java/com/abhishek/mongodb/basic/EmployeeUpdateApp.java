@@ -1,14 +1,14 @@
 package com.abhishek.mongodb.basic;
 
-import com.abhishek.mongodb.common.MongoConstant;
-import com.abhishek.mongodb.common.MongoUtil;
+import com.abhishek.mongodb.constant.MongoConstant;
+import com.abhishek.mongodb.constant.MongoUtil;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
 /**
- * Created by info on 4/17/2016.
+ * Created by Abhishek on 4/17/2016.
  */
 public class EmployeeUpdateApp {
 
@@ -33,7 +33,7 @@ public class EmployeeUpdateApp {
 
         employeeCollection.insertOne(insertEmpDocument);
 */
-        MongoUtil.printEmployeeDocuments(employeeCollection.find());
+        MongoUtil.printFindIterableDocuments(employeeCollection.find());
 
        /* System.out.println("Update all employee from Fresher to Java Developer");
         Document queryDocument = new Document("designation", "Fresher");
@@ -50,7 +50,7 @@ public class EmployeeUpdateApp {
         System.out.println("Update Result:"+updateResult.getModifiedCount());
 */
 
-        MongoUtil.printEmployeeDocuments(employeeCollection.find());
+        MongoUtil.printFindIterableDocuments(employeeCollection.find());
 
    }
 

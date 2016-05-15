@@ -1,7 +1,7 @@
 package com.abhishek.mongodb.basic;
 
-import com.abhishek.mongodb.common.MongoConstant;
-import com.abhishek.mongodb.common.MongoUtil;
+import com.abhishek.mongodb.constant.MongoConstant;
+import com.abhishek.mongodb.constant.MongoUtil;
 import com.mongodb.MongoClient;
 import com.mongodb.client.AggregateIterable;
 import com.mongodb.client.MongoCollection;
@@ -12,7 +12,7 @@ import org.bson.conversions.Bson;
 import java.util.Arrays;
 
 /**
- * Created by info on 4/22/2016.
+ * Created by Abhishek on 4/22/2016.
  */
 public class EmployeeAggregateApp {
     public static void main(String arg[]){
@@ -22,7 +22,7 @@ public class EmployeeAggregateApp {
 
         MongoCollection<Document> employeeCollection = mongoDatabase.getCollection("employee");
 
-        MongoUtil.printEmployeeDocuments(employeeCollection.find());
+        MongoUtil.printFindIterableDocuments(employeeCollection.find());
 
         Document groupKey = new Document("_id","$designation");
         Document aggregateFunction = new Document("$sum", 1);
@@ -32,7 +32,7 @@ public class EmployeeAggregateApp {
         System.out.println("Group Employees by Designation with Count");
         AggregateIterable<Document> groupByDesignation = employeeCollection.aggregate(Arrays.<Bson>asList(new Document("$group", groupKey)));
 
-        MongoUtil.printEmployeeDocuments(groupByDesignation);
+        MongoUtil.printAggregateIterableDocuments(groupByDesignation);
 
         System.out.println("Group all Patel Employees by Designation with Count");
 
@@ -42,7 +42,7 @@ public class EmployeeAggregateApp {
                         new Document("$group", groupKey)
         ));
 
-        MongoUtil.printEmployeeDocuments(groupByDesignationOfPatelEmp);
+        MongoUtil.printAggregateIterableDocuments(groupByDesignationOfPatelEmp);
 
         mongo.close();
     }
