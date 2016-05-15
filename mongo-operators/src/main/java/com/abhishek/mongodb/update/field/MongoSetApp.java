@@ -29,7 +29,9 @@ public class MongoSetApp {
 	System.out.println("Before Updating ---");
 	MongoUtil.printFindIterableDocuments(restaurantsCollection.find(findDocument));
 
-	Document oneAndUpdate = restaurantsCollection.findOneAndUpdate(findDocument, setDocument);
+	Document resultFindUpdateDocument = restaurantsCollection.findOneAndUpdate(findDocument, setDocument);
+
+	System.out.println("resultFindUpdateDocument is original document which get modified");
 
 	System.out.println("After Updating ---");
 	MongoUtil.printFindIterableDocuments(restaurantsCollection.find(findDocument));
