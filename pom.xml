@@ -22,6 +22,7 @@
     <module>mongo-crud</module>
     <module>mongo-operators</module>
     <module>mongo-common</module>
+    <module>mongo-university</module>
   </modules>
   <packaging>pom</packaging>
 
