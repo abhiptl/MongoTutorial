@@ -1,4 +1,4 @@
-package com.abhishek.mongodb.week1;
+package com.abhishek.mongodb.homework.week1;
 
 import java.net.UnknownHostException;
 

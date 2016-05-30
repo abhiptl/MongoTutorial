@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.abhishek.mongodb.week1;
+package com.abhishek.mongodb.homework.week1;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -33,7 +33,7 @@ import java.util.Map;
 /**
  * Created by Abhishek on 5/28/2016.
  *
- * Just run mvn compile exec:java -Dexec.mainClass=com.abhishek.mongodb.week1.SparkHomework3.
+ * Just run mvn compile exec:java -Dexec.mainClass=SparkHomework3.
  * You will get Spark initiation message and then hit http://localhost:4567/ to get answer.
  *
  */
