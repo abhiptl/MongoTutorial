@@ -1,7 +1,7 @@
 # Mongo Java Tutorial
-This repository will contain practical application to understand MongoDB Java Driver. It also MongoDB university exam question/answer and homework.
+This repository will contain practical application to understand MongoDB Java Driver. It also includes MongoDB university exam question/answer and homework.
 
-######Technologies and software used:######
+###Technologies and software used:###
 * [Java SE 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 * [MongoDB](http://www.mongodb.org/)
 * [Spark](http://www.sparkjava.com/)
