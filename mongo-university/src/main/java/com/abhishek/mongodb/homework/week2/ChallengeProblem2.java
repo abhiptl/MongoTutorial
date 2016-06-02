@@ -23,7 +23,8 @@ public class ChallengeProblem2 {
 	MongoDatabase database = client.getDatabase("video");
 	final MongoCollection<Document> movieDetailsCollection = database.getCollection("movieDetails");
 
-	FindIterable<Document> documents = movieDetailsCollection.find(and(Filters.lt("imdb.votes", 10000) ,Filters.eq("tomato.consensus", null), Filters.in("year", asList(2010,2011,2012,2013,2014))));
+	//Putting Filters.exists("tomato.consensus") is important to check if that field exist or not
+	FindIterable<Document> documents = movieDetailsCollection.find(and(Filters.lt("imdb.votes", 10000) ,Filters.exists("tomato.consensus"), Filters.eq("tomato.consensus", null), Filters.in("year", asList(2010,2011,2012,2013))));
 	MongoUtil.printFindIterableDocuments(documents);
 
   }
