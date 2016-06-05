@@ -1,0 +1,2 @@
+## Run this command from where logData.csv is in file system.
+mongoimport -d testdb -c systemlogs --type csv --file logData.csv --headerline
