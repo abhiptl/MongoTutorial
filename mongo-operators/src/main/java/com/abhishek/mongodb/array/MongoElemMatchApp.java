@@ -24,12 +24,10 @@ public class MongoElemMatchApp {
 	System.out.println("Find All restaurants where any dated grades of Restaurant has grade=A and score>=20");
 
 	Document gradeDocument = new Document("grade", "A").append("score", new Document("$gte",20));
-	//Document scoreDocument = new Document("score", new Document("$gte",100));
 
 	List<Document> listAllDocuments = new ArrayList<>();
 
 	listAllDocuments.add(new Document("$elemMatch", gradeDocument));
-	//listAllDocuments.add(new Document("$elemMatch", scoreDocument));
 
 	Document allDocument = new Document("$all", listAllDocuments);
 	Document gradesDocument = new Document("grades", allDocument);
