@@ -1,0 +1,2 @@
+logDate,threadName,level,qualifiedClass,lineNumber,logMessage
+2016-05-25T15:11:17.810Z,RMI TCP Connection(5)-127.0.0.1,INFO,org.generationcp.middleware.hibernate.XADataSourceProperties.getPropertyValue,82,Property value 'db.port' found in database.properties. Using value specifed in properties file '3306'.
