@@ -1,4 +1,4 @@
-package com.abhishek.mongodb.create;
+package com.abhishek.mongodb.crud.create;
 
 import java.util.Calendar;
 

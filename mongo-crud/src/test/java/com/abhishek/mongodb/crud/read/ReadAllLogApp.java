@@ -1,4 +1,4 @@
-package com.abhishek.mongodb.read;
+package com.abhishek.mongodb.crud.read;
 
 
 import com.abhishek.mongodb.constant.MongoConstant;
