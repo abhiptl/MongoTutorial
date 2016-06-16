@@ -1,25 +1,26 @@
 /*
- * Copyright 2015 MongoDB, Inc.
+ * Copyright 2012-2016 MongDB, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *  http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
  */
 
 package course;
 
-import com.mongodb.ErrorCategory;
 import com.mongodb.MongoWriteException;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
 import org.bson.Document;
 import sun.misc.BASE64Encoder;
 
@@ -28,8 +29,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Random;
-
-import static com.mongodb.client.model.Filters.eq;
 
 public class UserDAO {
     private final MongoCollection<Document> usersCollection;
@@ -57,18 +56,13 @@ public class UserDAO {
             usersCollection.insertOne(user);
             return true;
         } catch (MongoWriteException e) {
-            if (e.getError().getCategory().equals(ErrorCategory.DUPLICATE_KEY)) {
-                System.out.println("Username already in use: " + username);
-                return false;
-            }
-            throw e;
+            System.out.println("Username already in use: " + username);
+            return false;
         }
     }
 
     public Document validateLogin(String username, String password) {
-        Document user;
-
-        user = usersCollection.find(eq("_id", username)).first();
+        Document user = usersCollection.find(Filters.eq("_id", username)).first();
 
         if (user == null) {
             System.out.println("User not in database");
