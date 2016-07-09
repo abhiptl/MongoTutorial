@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>mongo-blog</module>
+        <module>mongo-finalexam4</module>
     </modules>
 
     <properties>
