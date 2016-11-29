@@ -1,5 +1,5 @@
 # Mongo Java Tutorial
-This repository will contain practical application to understand MongoDB Java Driver. It also includes MongoDB university exam
+This repository will contain practical application to understand MongoDB Java Driver. It includes MongoDB university exam
 question/answer and homework assignments.
 I am [certified](https://s3.amazonaws.com/edu-cert.10gen.com/downloads/4c1cb62e4e254b7e8e828afdfa8bec6a/Certificate.pdf)  Mongo Java Developer.
 
